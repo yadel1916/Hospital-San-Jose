@@ -10,39 +10,26 @@ package autonoma.hospitalsanjose.models;
 public class MedicamentoGenerico extends Medicamento {
     
     //Atributos//
-    private double costo;
-    private double precioVenta;
+    
+   
     
     //Constructor//
 
-    public MedicamentoGenerico(double costo, double precioVenta, String nombre, String descripción) {
-        super(nombre, descripción);
-        this.costo = costo;
-        this.precioVenta = precioVenta;
+    public MedicamentoGenerico(String nombre, String descripcion,double costo) {
+        super(nombre, descripcion, costo);
+        
+        
     }
     
     //Metodos get  y set//
 
-    public double getCosto() {
-        return costo;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
-    public double getPrecioVenta() {
-        return precioVenta;
-    }
-
-    public void setPrecioVenta(double precioVenta) {
-        this.precioVenta = precioVenta;
-    }
+   
     
     //Metodo abstracto//
     @Override 
     public double calcularVenta(){
-        return precioVenta = (( costo * 0.10)+ costo);
+        return (costo);
+//        return (( c * 0.10)+ costo);
     }
     
     //Metodo//

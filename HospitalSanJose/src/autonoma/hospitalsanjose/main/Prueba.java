@@ -29,24 +29,24 @@ public class Prueba {
         ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
         
         
-        Hospital h1 = new Hospital("juan","nldns","bihbvi", 12.3, 12.3, "gbib", "vjvuvu", ubicación,gerente,empleados,pacientes);
-        
-        EmpleadoAreaSalud emp1 = new EmpleadoAreaSalud("Cirujano",13,2.400,"Nicolas", "143343","30",1);
-        EmpleadoOperativo emp2 = new EmpleadoOperativo("Infantil",1.500,"Elena","394800","26",3);
-        
-        
-        Nomina nomina = new Nomina("120723",1,56.54423,null);
-        nomina.agregarEmpleado(emp1);
-        nomina.agregarEmpleado(emp2);
-        
-        nomina.generarNomina(h1);
-        
-        System.out.println(nomina.getTotalNomina());
-        System.out.println(h1.getPresupuesto());
-        System.out.println(h1.getEstado());
-        
-        
-        System.out.println(h1.toString());
+//        Hospital h1 = new Hospital("juan","nldns","bihbvi", 12.3, 12.3, "gbib", "vjvuvu", ubicación,gerente,empleados,pacientes);
+//        
+//        EmpleadoAreaSalud emp1 = new EmpleadoAreaSalud("Cirujano",13,2.400,"Nicolas", "143343","30",1);
+//        EmpleadoOperativo emp2 = new EmpleadoOperativo("Infantil",1.500,"Elena","394800","26",3);
+//        
+//        
+//        Nomina nomina = new Nomina("120723",1,56.54423,null);
+//        nomina.agregarEmpleado(emp1);
+//        nomina.agregarEmpleado(emp2);
+//        
+//        nomina.generarNomina(h1);
+//        
+//        System.out.println(nomina.getTotalNomina());
+//        System.out.println(h1.getPresupuesto());
+//        System.out.println(h1.getEstado());
+//        
+//        
+//        System.out.println(h1.toString());
     }
     
 }

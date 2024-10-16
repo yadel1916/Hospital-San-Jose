@@ -12,13 +12,13 @@ public class Cita {
     //Atributos//
     
     private Paciente paciente;
-    private String medicoConsulta;
+    private EmpleadoAreaSalud medicoConsulta;
     private String fechaConsulta;
     private double valorConsulta;
     
     //Constructor//
 
-    public Cita(Paciente paciente, String medicoConsulta, String fechaConsulta, double valorConsulta) {
+    public Cita(Paciente paciente, EmpleadoAreaSalud medicoConsulta, String fechaConsulta, double valorConsulta) {
         this.paciente = paciente;
         this.medicoConsulta = medicoConsulta;
         this.fechaConsulta = fechaConsulta;
@@ -35,11 +35,11 @@ public class Cita {
         this.paciente = paciente;
     }
 
-    public String getMedicoConsulta() {
+    public EmpleadoAreaSalud getMedicoConsulta() {
         return medicoConsulta;
     }
 
-    public void setMedicoConsulta(String medicoConsulta) {
+    public void setMedicoConsulta(EmpleadoAreaSalud medicoConsulta) {
         this.medicoConsulta = medicoConsulta;
     }
 

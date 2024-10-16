@@ -1,6 +1,7 @@
 
 package autonoma.hospitalsanjose.models;
 
+import autonoma.hospitalsanjose.exceptions.PresupuestoNegativo;
 import java.util.ArrayList;
 
 /**
@@ -16,6 +17,7 @@ public class Hospital {
     private String dirección;
     private String telefono;
     private double presupuesto;
+    private double patrocinio;
     private double metaVentaAnual;
     private String fechaFundación;
     private String estado;
@@ -23,17 +25,20 @@ public class Hospital {
     private Gerente gerente;
     private Empleado empleados;
     private Paciente pacientes;
+    private Inventario inventario;
     private ArrayList<Cita> citas;
     private ArrayList<Medicamento> medicamentos;
+    private Nomina nomina;
     
    
     //Constructor//
 
-    public Hospital(String nombre, String dirección, String telefono, double presupuesto, double metaVentaAnual, String fechaFundación, String estado, Localización ubicación, Gerente gerente, Empleado empleados, Paciente pacientes) {
+    public Hospital(String nombre, String dirección, String telefono, double presupuesto, double metaVentaAnual, String fechaFundación, String estado, Localización ubicación, Gerente gerente, Empleado empleados, Paciente pacientes,Inventario inventario, Nomina nomina) {
         this.nombre = nombre;
         this.dirección = dirección;
         this.telefono = telefono;
         this.presupuesto = presupuesto;
+        this.patrocinio=0;
         this.metaVentaAnual = metaVentaAnual;
         this.fechaFundación = fechaFundación;
         this.estado = estado;
@@ -41,9 +46,13 @@ public class Hospital {
         this.gerente = gerente;
         this.empleados = empleados;
         this.pacientes = pacientes;
+        this.inventario = inventario;
         this.citas = new ArrayList<>();
         this.medicamentos = new ArrayList<>();
+        this.nomina=nomina;
     }
+    
+    
     
     //Metodos get y set//
 
@@ -71,13 +80,24 @@ public class Hospital {
         this.telefono = telefono;
     }
 
-    public double getPresupuesto() {
+    public double getPresupuesto(){
         return presupuesto;
+        
     }
 
     public void setPresupuesto(double presupuesto) {
         this.presupuesto = presupuesto;
     }
+
+    public double getPatrocinio() {
+        return patrocinio;
+    }
+
+    public void setPatrocinio(double patrocinio) {
+        this.patrocinio = patrocinio;
+    }
+    
+    
 
     public double getMetaVentaAnual() {
         return metaVentaAnual;
@@ -167,20 +187,15 @@ public class Hospital {
         this.presupuesto += cita.getValorConsulta();
     }
     
-    public void registrarMedicamento(Medicamento medicamento){
-       
-        if (this.presupuesto < medicamento.getCosto()){
-           // throw  new Exception("No hay suficiente presupuesto");
-           
+    public void registrarMedicamento(Hospital hospital,Medicamento medicamento) throws PresupuestoNegativo {
+        try {
+            medicamentos.add(medicamento);
+            this.presupuesto -= medicamento.getCosto();
+            inventario.agregarMedicamento(hospital,medicamento);
         }
-        
-        medicamentos.add(medicamento);
-       
-        
-        this.presupuesto -= medicamento.getCosto();
-        
-        if (presupuesto < 0){
-            this.estado = "En Quiebra";
+        catch(PresupuestoNegativo pn){
+            hospital.registrarPatrocinio();
+            throw pn;
         }
         
     }
@@ -202,6 +217,17 @@ public class Hospital {
                "Gerente: " + gerente + "\n";
     }
     
+    /////// 
+    
+    public boolean registrarPatrocinio(){
+        if ((this.patrocinio + this.presupuesto) >= 0 ) {
+            setEstado("Activo");
+            setPresupuesto(this.patrocinio+presupuesto);
+            return true; 
+        }
+        return false; 
+    }
+    
     //CRUD Empleados//
 
     public boolean agregarEmpleado(Empleado empleado){
@@ -214,19 +240,19 @@ public class Hospital {
     }
     
     
-    public Empleado buscarEmpleado(String nombre){
-        return this.empleados.buscarEmpleado(nombre);
+    public Empleado buscarEmpleadoId(int id){
+        return this.empleados.buscarEmpleadoId(id);
     }
     
-    public Empleado buscarEmpleado(long id){
-        return this.empleados.buscarEmpleado(id);
+    public Empleado buscarEmpleadoNumDocumento(String numeroDocumento){
+        return this.empleados.buscarEmpleadoNumDocumento(numeroDocumento);
     }
     
-    public Empleado actualizarPlato(int id, Empleado empleado){
+    public Empleado actualizarEmpleado(int id, Empleado empleado){
         return this.empleados.actualizarEmpleado(id,empleado);
     }
     
-    public Empleado eliminarPlato(int id){
+    public Empleado eliminarEmpleado(int id){
         return this.empleados.eliminarEmpleados(id);
     }
     
@@ -259,6 +285,17 @@ public class Hospital {
     }
     
     //CRUD Reportes//
+    
+    //CRUD NOMINA////
+    public void generarNomina(Hospital hospital) throws PresupuestoNegativo {
+        try {
+            nomina.generarNomina(hospital);
+        }
+        catch(PresupuestoNegativo pn){
+            hospital.registrarPatrocinio();
+            throw pn;
+        }
+    }
     
     
     

@@ -11,16 +11,15 @@ public class MedicamentoMarca extends Medicamento {
     
     //Atributos//
     private String fabricante;
-    private double costo;
-    private double precioVenta;
+    
+   
     
     //Constructor//
 
-    public MedicamentoMarca(String fabricante, double costo, double precioVenta, String nombre, String descripción) {
-        super(nombre, descripción);
+    public MedicamentoMarca(String fabricante, double costo, String nombre, String descripción) {
+        super(nombre, descripción,costo);
         this.fabricante = fabricante;
-        this.costo = costo;
-        this.precioVenta = precioVenta;
+        
     }
     
     //Metodos get y set//
@@ -33,26 +32,12 @@ public class MedicamentoMarca extends Medicamento {
         this.fabricante = fabricante;
     }
 
-    public double getCosto() {
-        return costo;
-    }
-
-    public void setCosto(double costo) {
-        this.costo = costo;
-    }
-
-    public double getPrecioVenta() {
-        return precioVenta;
-    }
-
-    public void setPrecioVenta(double PrecioVenta) {
-        this.precioVenta = PrecioVenta;
-    }
+    
     
     //Metodo CalcularVenta//
     @Override
     public double calcularVenta(){
-        return precioVenta =((costo * 0.25)+ costo);
+        return ((costo * 0.25)+ costo);
     }
     
     //Metodos//

@@ -2,31 +2,36 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *Este algoritmo hereda las caracteristicas de un Empleado
+ * la clase EmpleadoAreaSalud se convierte en la clase hija, la cual hereda atributos y metodos a las clase padre ( Empleado).
  * @author Andres Rodriguez
  * @version 1.0.0
  * @since 20240910
  */
 public class EmpleadoAreaSalud extends Empleado {
     
-    //Atributos//
+    
+    /**
+    * el atributo especialidad de tipo String  se refiere a la especialidad del empleado.
+    */
     private String especialidad;
-    private int numHoraTrabajo;
-    private double salario;
+    
+    /**
+    * el atributo numeroHorasTrabajadas de tipo double  se refiere a las horas trabajadas del empleado.
+    */
+    private int numeroHorasTrabajadas;
     
     
-    //Constructor//
+    ////////////////////////////////////////// CONSTRUCTOR /////////////////////////////////////////////////
 
     public EmpleadoAreaSalud(String especialidad, int numHoraTrabajo, String nombre, String numeroDocumento, String edad,double salarioBase, int id) {
         super(nombre, numeroDocumento, edad,salarioBase,id);
         this.especialidad = especialidad;
-        this.numHoraTrabajo = numHoraTrabajo;
-        this.salario = salarioBase;
+        this.numeroHorasTrabajadas = numHoraTrabajo;
     }
     
    
     
-    //Metodos get set//
+    //////////////////////////////////////// METODOS DE ACCESO //////////////////////////////////////////
 
     public String getEspecialidad() {
         return especialidad;
@@ -37,34 +42,38 @@ public class EmpleadoAreaSalud extends Empleado {
     }
 
     public int getNumHoraTrabajo() {
-        return numHoraTrabajo;
+        return numeroHorasTrabajadas;
     }
 
     public void setNumHoraTrabajo(int numHoraTrabajo) {
-        this.numHoraTrabajo = numHoraTrabajo;
+        this.numeroHorasTrabajadas = numHoraTrabajo;
     }
 
-    public double getSalarioBase() {
-        return salario;
-    }
-
-    public void setSalarioBase(double salario) {
-        this.salario = salario;
-    }
     
-    //Metodo//
+    ////////////////////////////////////////////// METODOS ///////////////////////////////////////////////////
+    
+    /**
+    * el método toString devuelve  una cadena con todos los atributos deL empleado del area de la salud.
+    * @param  no recibe parámetros.
+    * @return retorna una cadena.
+    */
     @Override
-    public  double calcularSalario(){
-        return salario + ((salario * 1.2 ) * numHoraTrabajo );
-    }
     
     public String toString(){
         return "Empleado Salud: " + "\n" + 
-               "Especialida: " + especialidad + "\n" +
-               "Numero de horas trabajadas: " + numHoraTrabajo + "\n" +
-               "Salario base: " + salario + "\n" +
+               "Especialidad: " + especialidad + "\n" +
+               "Numero de horas trabajadas: " + numeroHorasTrabajadas + "\n" +
                "Salario: " + calcularSalario() + "\n" +
                 super.toString() + "\n";
     }
     
+    /**
+    * el método calcularSalario devuelve  una double con el salario del empleado
+    * @param  no recibe parámetros.
+    * @return retorna un double .
+    */
+    @Override
+    public double calcularSalario(){
+        return salarioBase + (salarioBase * 0.012 * numeroHorasTrabajadas); 
+    }
 }

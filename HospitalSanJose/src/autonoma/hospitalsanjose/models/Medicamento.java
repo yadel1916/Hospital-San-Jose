@@ -15,15 +15,21 @@ public abstract class Medicamento {
     
     private String nombre;
     private String descripción;
-    private ArrayList<Medicamento> medicamentos;
+    protected double costo; 
+    protected double precioVenta; 
+    
+    
     
     //Constructor//
 
-    public Medicamento(String nombre, String descripción) {
+    public Medicamento(String nombre, String descripción, double costo) {
         this.nombre = nombre;
         this.descripción = descripción;
-        this.medicamentos = new ArrayList<>();
+        this.costo=costo; 
+        this.precioVenta= calcularVenta(); 
     }
+    
+    
     
     
     //Metodos get y set//
@@ -44,57 +50,38 @@ public abstract class Medicamento {
         this.descripción = descripción;
     }
 
-    public ArrayList<Medicamento> getMedicamentos() {
-        return medicamentos;
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
+
+    public double getPrecioVenta() {
+        return precioVenta;
+    }
+
+    public void setPrecioVenta(double precioVenta) {
+        this.precioVenta = precioVenta;
     }
     
-    public abstract double getCosto();
     
     
-    //CRUD medicamentos//
-    public boolean agregarEmpleado(Medicamento medicamento){
-        return this.medicamentos.add(medicamento);
-    }
+    ///////////////////////////
     
-    public Medicamento buscarMedicamento(Medicamento medicamento){
-        for(int i = 0;i < this.medicamentos.size(); i++){
-            Medicamento medc = this.medicamentos.get(i);
-            if (medc.equals(medicamento)){
-               return medc;
-            }
-        }
-        return null;
-    }
+    
+    public abstract double calcularVenta();
+    
+
+    
+
+    
     
    
-    public Medicamento buscarMedicamentoNombre(String nombre){
-        for (int i = 0; i < this.medicamentos.size(); i++){
-            Medicamento medc = this.medicamentos.get(i);
-            if (medc.getNombre().equals(nombre)){
-                return medc;
-            }
-        }
-        return null;
-    }
     
-    public Medicamento eliminarMedicamento(String nombre){
-        Medicamento medi = this.buscarMedicamentoNombre(nombre);
-        if (medi != null){
-            medicamentos.remove(medi);
-            return medi;
-        }else {
-            return null;
-        }
-    }
     
-    public String mostrarArchivoEmpleados(){
-        String archivomedc= "";
-        for ( int i=0; i > this.medicamentos.size(); i++ ){
-            Medicamento medc = this.medicamentos.get(i);
-            archivomedc += archivomedc.toString() + "\n";
-        }
-        return archivomedc;
-    }
+    
     
     //Metodos//
     @Override
@@ -104,6 +91,6 @@ public abstract class Medicamento {
                "Descripción: " + descripción + "\n";
     }
     
-    public abstract double calcularVenta();
+   
     
 }

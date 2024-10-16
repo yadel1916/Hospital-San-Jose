@@ -1,27 +1,27 @@
 
 package autonoma.hospitalsanjose.models;
 
-/**
- *Este algoritmo hereda las caracteristicas de un Empleado
+/*
+ * la clase Empleadooperativo se convierte en la clase hija, la cual hereda atributos y metodos a las clase padre ( Empleado).
  * @author Andres Rodriguez
  * @version 1.0.0
  * @since 20240910
  */
 public class EmpleadoOperativo extends Empleado {
     
-    //Atributos//
+    /**
+    * el atributo area de tipo String  se refiere al area en la que labora el empleado operativo.
+    */
     private String area;
-    private double salario;
-    
-    //Constructor//
+   
+    ///////////////////////////////////////// CONSTRUCTOR //////////////////////////////////////////
 
     public EmpleadoOperativo(String area, String nombre, String numeroDocumento, String edad,double salarioBase, int id) {
         super(nombre, numeroDocumento, edad, salarioBase, id);
         this.area = area;
-        this.salario = salarioBase;
     }
     
-    //Metodos get y set//
+    /////////////////////////////////////////// METODOS DE ACCESO ///////////////////////////////////
 
     public String getArea() {
         return area;
@@ -31,29 +31,64 @@ public class EmpleadoOperativo extends Empleado {
         this.area = area;
     }
 
-    public double getSalarioBase() {
-        return salario;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setSalarioBase(double salario) {
-        this.salario = salario;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    //Metodo//
+
+    public String getNumeroDocumento() {
+        return numeroDocumento;
+    }
+
+    public void setNumeroDocumento(String numeroDocumento) {
+        this.numeroDocumento = numeroDocumento;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public double getSalarioBase() {
+        return salarioBase;
+    }
+
+    public void setSalarioBase(double salarioBase) {
+        this.salarioBase = salarioBase;
+    }
+
+    //////////////////////////////////////////// METODOS /////////////////////////////////////////////////
     
    
-    @Override
-    public double calcularSalario(){
-        return salario+ (salario * 0.20);
-    }
-   
+    /**
+    * el método toString devuelve  una cadena con todos los atributos deL empleado operativo.
+    * @param  no recibe parámetros.
+    * @return retorna una cadena.
+    */
     public String toString(){
         return "Empleado Operativo" + "\n" +
                "Area: " + area + "\n" +
-               "Salario Base: " + salario + "\n" +
                "Salario: " + calcularSalario() + 
                super.toString() + "\n";
     }
+   
+    /**
+    * el método calcularSalario devuelve  una double con el salario del empleado operativo.
+    * @param  no recibe parámetros.
+    * @return retorna un double .
+    */
+    @Override
+    public double calcularSalario(){
+        return salarioBase + (salarioBase * 0.20); 
+    }
+   
+    
     
     
 }
