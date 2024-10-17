@@ -30,9 +30,9 @@ public class Prueba {
         ArrayList<Paciente> pacientes = new ArrayList<Paciente>();
         
         
-       Hospital h1 = new Hospital("juan","calle27-A","448-242-255", 120.000000, 100.000000, "13/06/2000", "Activo", ubicación,gerente,null, null, null,null);
-       VentanaPrincipal ventana =  new VentanaPrincipal(h1);
-       ventana.setVisible(true);
+//       Hospital h1 = new Hospital("juan","calle27-A","448-242-255", 120.000000, 100.000000, "13/06/2000", "Activo", ubicación,gerente,null, null, null,null);
+//       VentanaPrincipal ventana =  new VentanaPrincipal(h1);
+//       ventana.setVisible(true);
 //        
 //        EmpleadoAreaSalud emp1 = new EmpleadoAreaSalud("Cirujano",13,2.400,"Nicolas", "143343","30",1);
 //        EmpleadoOperativo emp2 = new EmpleadoOperativo("Infantil",1.500,"Elena","394800","26",3);
