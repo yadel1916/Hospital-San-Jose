@@ -2,28 +2,34 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *Este algoritmo modela un inventario de medicamentos
+ * la clase Farmacia tiene las carácteristicas establecidas. 
  * @author Andres Rodriguez
  * @version 1.0.0
- * @since 20240910
+ * @since 2024 17 10
  */
 public class Farmacia {
     
-    //Atributos//
+    /**
+    * el atributo inventario de tipo Inventario  se refiere al inventario que tiene la farmacia. 
+    */
     private Inventario inventario;
     
-    //Constructor//
+    
+    ///////////////////////////////////////////// CONSTRUCTOR /////////////////////////////////////////
+    
     public Farmacia (Inventario inventario){
         this.inventario = inventario;
     }
     
-    //Metodos get //
+    ///////////////////////////////////////////// METODOS DE ACCESO ////////////////////////////////////
 
     public Inventario getInventario() {
         return inventario;
     }
     
     
+    
+    ///////////////////////////////////////////////// METODOS //////////////////////////////////////77
     
     
     

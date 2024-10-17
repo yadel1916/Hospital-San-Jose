@@ -86,7 +86,10 @@ public class Gerente  {
     */
     @Override
     public String toString() {
-        return "Gerente{" + "nombre=" + nombre + ", numeroDocumento=" + numeroDocumento + ", edad=" + edad + ", carrera=" + carrera + '}';
+        return "Gerente{" + "nombre:" + nombre + "\n"+
+                ", numeroDocumento:" + numeroDocumento + "\n"+
+                ", edad:" + edad + "\n"+
+                ", carrera:" + carrera + '}';
     }
 }
     

@@ -7,7 +7,7 @@ package autonoma.hospitalsanjose.models;
  * @version 1.0.0
  * @since 20240910
  */
-public class Localización {
+public class Localizacion {
     
     //Atributos//
     private double longitud;
@@ -15,7 +15,7 @@ public class Localización {
     
     //Constructor//
 
-    public Localización(double longitud, double latitud) {
+    public Localizacion(double longitud, double latitud) {
         this.longitud = longitud;
         this.latitud = latitud;
     }

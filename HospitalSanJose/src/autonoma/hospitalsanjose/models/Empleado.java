@@ -4,10 +4,10 @@ package autonoma.hospitalsanjose.models;
 import java.util.ArrayList;
 
 /**
- *Este algoritmo modela las caracteristicas de un Empleado
+ * la clase Empleado es una clase abstracta, que heredará sus características a las clases hijas.
  * @author Andres Rodriguez
  * @version 1.0.0
- * @since 20240910
+ * @since 2024 09 10
  */
 public abstract class Empleado {
     
@@ -37,11 +37,6 @@ public abstract class Empleado {
     protected double salarioBase; 
     
     /**
-    * el atributo listaEmpleado de tipo ArrayList  se refiere a la lista de los empleados 
-    */
-    private ArrayList<Empleado> listaEmpleados;
-    
-    /**
     * el atributo id de tipo int  se refiere a identificador.
     */
     private int id;
@@ -54,7 +49,6 @@ public abstract class Empleado {
         this.numeroDocumento = numeroDocumento;
         this.edad = edad;
         this.salarioBase = salarioBase;
-        this.listaEmpleados = new ArrayList<>();
         this.id = Empleado.autoincremental;
     }
     
@@ -92,10 +86,6 @@ public abstract class Empleado {
         this.salarioBase = salarioBase;
     }
     
-    public ArrayList<Empleado> getEmpleados() {
-        return listaEmpleados;
-    }
-    
     public int getId() {
         return id;
     }
@@ -113,117 +103,19 @@ public abstract class Empleado {
     }
     
     
-    /**
-    * el método agregarEmpleado agrega el empleado a la lista
-    * @param  recibe como parametro el empleado tipo Empleado.
-    * @return retorna una booleano
-    */
-    public boolean  agregarEmpleado(Empleado empleado){
-        return this.listaEmpleados.add(empleado);
-    }
     
     /**
-    * el método buscarEmpleado busca el empleado en  la lista
-    * @param  recibe como parametro el empleado tipo Empleado.
-    * @return retorna un Empleado em.
+    * el método calcularSalario reune los requisitos para calcular el salario de cada empleado .
+    * @param  no recibe parámetros.
+    * @return retorna un double.
     */
-    public Empleado buscarEmpleado(Empleado empleado){
-        for(int i = 0;i < this.listaEmpleados.size(); i++){
-            Empleado em = this.listaEmpleados.get(i);
-            if (em.equals(empleado)){
-               return em;
-            }
-        }
-        return null;
-    }
+    public abstract double calcularSalario();
     
-    /**
-    * el método buscarEmpleadoNombre busca el empleado en la lista por el nombre
-    * @param  recibe como parametro nombre de tipo String.
-    * @return retorna un Empleado em.
-    */
-    public Empleado buscarEmpleadoNumDocumento(String numeroDocumento){
-       for(int i = 0;i < this.listaEmpleados.size(); i++){
-           Empleado em = this.listaEmpleados.get(i);
-           if (em.equals(numeroDocumento)){
-              return em;
-           }
-       }
-       return null;
-    }
     
-    /**
-    * el método buscarEmpleadoId busca el empleado en la lista por el Id
-    * @param  recibe como parametro id de tipo long.
-    * @return retorna un Empleado em.
-    */
-    public Empleado buscarEmpleadoId( int id){
-        for (int i = 0; i < this.listaEmpleados.size(); i++){
-            Empleado em = this.listaEmpleados.get(i);
-            if (em.getId() == id){
-                return em;
-            }
-        }
-        return null;
-    }
     
-    /**
-    * el método buscarIndiceEmpleado busca el indice del empleado
-    * @param  recibe como parametro id de tipo long.
-    * @return retorna un Empleado em.
-    */
-    public Empleado buscarIndiceEmpleado(String nombre){
-        for (int i = 0; i < this.listaEmpleados.size(); i++){
-            Empleado em = this.listaEmpleados.get(i);
-            if (em.getNombre().equals(nombre)){
-                return em;
-            }
-        }
-        return null;
-    }
     
-    /**
-    * el método buscarIndiceEmpleadoId busca el indice del empleado por el id
-    * @param  recibe como parametro id de tipo long.
-    * @return retorna un Empleado em.
-    */
-    private int buscarIndiceEmpleadoId (int id){
-        for (int i = 0; i < this.listaEmpleados.size(); i++){
-            Empleado em = this.listaEmpleados.get(i);
-            if (em.getId() == id){
-                return i;
-            }
-        }
-        return -1;
-    }
+}
     
-    /**
-    * el método actualizarEmpleado actualiza los cambios realizados  del empleado
-    * @param  recibe como parametro id de tipo long.
-    * @return retorna un Empleado em.
-    */
-    public Empleado actualizarEmpleado(int id, Empleado empleado){
-        int index = this.buscarIndiceEmpleadoId(id);
-        if (index >= 0){
-            return this.listaEmpleados.set(index,empleado);
-        }else {
-            return null;
-        }
-    }
-    
-    /**
-    * el método eliminarEmpleado elimina el empleado de la lista
-    * @param  recibe como parametro id de tipo int.
-    * @return retorna un Empleado em.
-    */
-    public Empleado eliminarEmpleados(int id){
-        int index = this.buscarIndiceEmpleadoId(id);
-        if (index >= 0){
-            return this.listaEmpleados.remove(index);
-        }else {
-            return null;
-        }
-    }
     
 //    public String archivoEmpleados(){
 //        String archivo = "";
@@ -234,14 +126,4 @@ public abstract class Empleado {
 //        return archivo;
 //    }
     
-    /**
-    * el método calcularSalario devuelve  una double con los requisitos para calcular el salario de cada empleado .
-    * @param  no recibe parámetros.
-    * @return retorna un double.
-    */
-    public abstract double calcularSalario();
-    
-    
-    
-    
-}
+   

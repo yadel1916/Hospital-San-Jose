@@ -138,6 +138,118 @@ public class Nomina {
         }
         return totalSalarios;
     }
+    
+    /**
+    * el método agregarEmpleado agrega el empleado a la lista
+    * @param  recibe como parametro el empleado tipo Empleado.
+    * @return retorna una booleano
+    */
+    public boolean  agregarEmpleado(Empleado empleado){
+        return this.listaEmpleados.add(empleado);
+    }
+    
+    /**
+    * el método buscarEmpleado busca el empleado en  la lista
+    * @param  recibe como parametro el empleado tipo Empleado.
+    * @return retorna un Empleado em.
+    */
+    public Empleado buscarEmpleado(Empleado empleado){
+        for(int i = 0;i < this.listaEmpleados.size(); i++){
+            Empleado em = this.listaEmpleados.get(i);
+            if (em.equals(empleado)){
+               return em;
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * el método buscarEmpleadoNombre busca el empleado en la lista por el nombre
+    * @param  recibe como parametro numeroDocumento de tipo String.
+    * @return retorna un Empleado em.
+    */
+    public Empleado buscarEmpleadoNumDocumento(String numeroDocumento){
+       for(int i = 0;i < this.listaEmpleados.size(); i++){
+           Empleado em = this.listaEmpleados.get(i);
+           if (em.equals(numeroDocumento)){
+              return em;
+           }
+       }
+       return null;
+    }
+    
+    /**
+    * el método buscarEmpleadoId busca el empleado en la lista por el Id
+    * @param  recibe como parametro id de tipo int.
+    * @return retorna un Empleado em.
+    */
+    public Empleado buscarEmpleadoId( int id){
+        for (int i = 0; i < this.listaEmpleados.size(); i++){
+            Empleado em = this.listaEmpleados.get(i);
+            if (em.getId() == id){
+                return em;
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * el método buscarIndiceEmpleado busca el indice del empleado
+    * @param  recibe como parametro nombre de tipo String.
+    * @return retorna un Empleado em.
+    */
+    public Empleado buscarIndiceEmpleado(String nombre){
+        for (int i = 0; i < this.listaEmpleados.size(); i++){
+            Empleado em = this.listaEmpleados.get(i);
+            if (em.getNombre().equals(nombre)){
+                return em;
+            }
+        }
+        return null;
+    }
+    
+    /**
+    * el método buscarIndiceEmpleadoId busca el indice del empleado por el id
+    * @param  recibe como parametro id de tipo int.
+    * @return retorna un Empleado em.
+    */
+    private int buscarIndiceEmpleadoId (int id){
+        for (int i = 0; i < this.listaEmpleados.size(); i++){
+            Empleado em = this.listaEmpleados.get(i);
+            if (em.getId() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    
+    /**
+    * el método actualizarEmpleado actualiza los cambios realizados  del empleado
+    * @param  recibe como parametro id de tipo int y un empleado de tipo Empleado.
+    * @return retorna un Empleado em.
+    */
+    public Empleado actualizarEmpleado(int id, Empleado empleado){
+        int index = this.buscarIndiceEmpleadoId(id);
+        if (index >= 0){
+            return this.listaEmpleados.set(index,empleado);
+        }else {
+            return null;
+        }
+    }
+    
+    /**
+    * el método eliminarEmpleado elimina el empleado de la lista
+    * @param  recibe como parametro id de tipo int.
+    * @return retorna un Empleado em.
+    */
+    public Empleado eliminarEmpleados(int id){
+        int index = this.buscarIndiceEmpleadoId(id);
+        if (index >= 0){
+            return this.listaEmpleados.remove(index);
+        }else {
+            return null;
+        }
+    }
 
 }
 

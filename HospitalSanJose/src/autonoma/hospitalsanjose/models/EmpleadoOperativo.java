@@ -5,7 +5,7 @@ package autonoma.hospitalsanjose.models;
  * la clase Empleadooperativo se convierte en la clase hija, la cual hereda atributos y metodos a las clase padre ( Empleado).
  * @author Andres Rodriguez
  * @version 1.0.0
- * @since 20240910
+ * @since 2024 09 10
  */
 public class EmpleadoOperativo extends Empleado {
     
@@ -79,7 +79,7 @@ public class EmpleadoOperativo extends Empleado {
     }
    
     /**
-    * el método calcularSalario devuelve  una double con el salario del empleado operativo.
+    * el método calcularSalario  calcula el salario del empleado operativo.
     * @param  no recibe parámetros.
     * @return retorna un double .
     */

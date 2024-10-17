@@ -9,7 +9,7 @@ import autonoma.hospitalsanjose.models.EmpleadoAreaSalud;
 import autonoma.hospitalsanjose.models.EmpleadoOperativo;
 import autonoma.hospitalsanjose.models.Gerente;
 import autonoma.hospitalsanjose.models.Hospital;
-import autonoma.hospitalsanjose.models.Localización;
+import autonoma.hospitalsanjose.models.Localizacion;
 import autonoma.hospitalsanjose.models.Nomina;
 import autonoma.hospitalsanjose.models.Paciente;
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class Prueba {
     
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        Localización ubicación = new Localización(12.3, 11.3);
+        Localizacion ubicación = new Localizacion(12.3, 11.3);
         Gerente gerente = new Gerente("jabier","1232344", 19,"administrador");
         ArrayList<Empleado> empleados = new ArrayList<Empleado>();
         ArrayList<Paciente> pacientes = new ArrayList<Paciente>();

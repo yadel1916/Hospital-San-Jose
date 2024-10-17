@@ -2,26 +2,31 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *Este algoritmo modela la caracteristicas de una enfermedad
+ * la clase Enfermedad se refiere a la enfermedad que podrá tener cada paciente.
  * @author Andres Rodriguez
  * @version 1.0.0
- * @since 20240910
+ * @since 2024 09 10
  */
 public class Enfermedad {
     
-    //Atributos//
-    
+    /**
+    * el atributo nombre de tipo String  se refiere al nombre de la enfermedad.
+    */
     private String nombre;
+    
+    /**
+    * el atributo descripción de tipo String  tiene la descripción de la enfermedad.
+    */
     private String descripción;
     
-    //Constructor//
+    /////////////////////////////////////// CONSTRUCTOR //////////////////////////////////////////////
 
     public Enfermedad(String nombre, String descripción) {
         this.nombre = nombre;
         this.descripción = descripción;
     }
     
-    //Metodos get y set//
+    ///////////////////////////////////////// METODOS DE ACCESO ///////////////////////////////////////7
 
     public String getNombre() {
         return nombre;
@@ -39,7 +44,7 @@ public class Enfermedad {
         this.descripción = descripción;
     }
     
-    //Metodos//
+    ///////////////////////////////////// METODOS /////////////////////////////////////////////////
     public String toString(){
         return "Enfermedad: " + "\n" +
                "Nombre: " + nombre + "\n" +

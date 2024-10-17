@@ -2,21 +2,34 @@
 package autonoma.hospitalsanjose.models;
 
 /**
- *Este algoritmo modela las caracteristicas de una cita medica
- * @author Andres Rodriguez
+ * la clase Cita, tendrá las carácteristicas de la cita.
+ * @author Katherin Monroy
  * @version 1.0.0
- * @since 20240910
+ * @since 2024 17 10
  */
 public class Cita {
     
-    //Atributos//
-    
+    /**
+    * el atributo paciente de tipo Paciente  se refiere al paciente que tensrá la cita.
+    */
     private Paciente paciente;
+    
+    /**
+    * el atributo medicoConsulta de tipo EmpleadoAreaSalud  se refiere al medico que atenderá la cita.
+    */
     private EmpleadoAreaSalud medicoConsulta;
+    
+    /**
+    * el atributo fechaConsulta de tipo String  se refiere a la fecha de la cita.
+    */
     private String fechaConsulta;
+    
+    /**
+    * el atributo valorConsulta de tipo double  se refiere al valor de la cita.
+    */
     private double valorConsulta;
     
-    //Constructor//
+    ////////////////////////////////////////////CONSTRUCTOR//////////////////////////////////////////////
 
     public Cita(Paciente paciente, EmpleadoAreaSalud medicoConsulta, String fechaConsulta, double valorConsulta) {
         this.paciente = paciente;
@@ -25,7 +38,7 @@ public class Cita {
         this.valorConsulta = valorConsulta;
     }
     
-    //Metodos get y set//
+    /////////////////////////////////////////////// METODOS DE ACCESO //////////////////////////////////////
 
     public Paciente getPaciente() {
         return paciente;
@@ -60,7 +73,7 @@ public class Cita {
     }
     
     
-    //Metodos//
+   /////////////////////////////////////////////////// METODOS /////////////////////////////////////////////
     public String toString(){
         return "Cita: " + "\n" +
                "Paciente: " + paciente + "\n" +
