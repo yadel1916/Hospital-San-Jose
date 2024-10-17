@@ -1,6 +1,7 @@
 
 package autonoma.hospitalsanjose.models;
 
+import autonoma.hospitalsanjose.exceptions.EnfermedadNegativa;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
@@ -225,15 +226,15 @@ public class Paciente {
     * @return no retorna
     * @exception maneja una exception
     */
-    public void eliminarEnfermedad (String nombre) throws Exception{
-        Enfermedad enfermedad = this.buscarEnfermedad(nombre);
+    public void eliminarEnfermedad (String nombre) throws EnfermedadNegativa {
+        Enfermedad enfermedad = this.buscarEnfermedad(nombre); 
         if (enfermedad != null) {
                 enfermedades.remove(enfermedad);
                 if (enfermedades.isEmpty()){
                     this.estado = "Saludable";
                 }
         }else{
-            throw new Exception("Enfermedad no encontrada"); /// en donde estan creadas las excepciones ?
+            throw new EnfermedadNegativa(); /// en donde estan creadas las excepciones ? /////Corregido!!
         }
     }
     
@@ -301,13 +302,13 @@ public class Paciente {
     * @exception tiene una excepcion
     * @return retorna null.
     */
-    public MedicamentoPaciente eliminarMedicamento (String nombre) throws Exception{
+    public MedicamentoPaciente eliminarMedicamento (String nombre) throws EnfermedadNegativa{
         MedicamentoPaciente medicamento = this.buscarMedicamento(nombre);
         if (medicamento != null) {
                  medicamentoPacientes.remove(medicamento);
                 
         }else{
-            throw new Exception("Enfermedad no encontrada"); //////////// donde esta ña excepcion
+            throw new EnfermedadNegativa(); //////////// donde esta ña excepcion /////Corregido!!!
         }
         return medicamento;
     }
@@ -318,11 +319,11 @@ public class Paciente {
     * @return retorna un String.
     */
     
-    public String mostrarMedicamentos(){  /////// no entiendo este metodo
+    public String mostrarMedicamentos(){  /////// no entiendo este metodo //// corregido
         String lista = "";
         for ( int i=0; i > this.medicamentoPacientes.size(); i++ ){
             MedicamentoPaciente medicamento = this.medicamentoPacientes.get(i);
-            lista += lista.toString() + "\n";
+            lista += medicamento.toString() + "\n";
         }
         return lista;
     }
@@ -426,7 +427,7 @@ public class Paciente {
     
     
     //Curar Enfermedad//
-    public void curarEnfermedad(Enfermedad enfermedad, MedicamentoPaciente medicamento) throws Exception{
+    public void curarEnfermedad(Enfermedad enfermedad, MedicamentoPaciente medicamento) throws EnfermedadNegativa {
        Enfermedad  enfermedad1 = this.buscarEnfermedad(enfermedad);
        if(enfermedad1 != null || buscarMedicamento(medicamento) == null ){
                enfermedades.remove(enfermedad);
@@ -435,7 +436,7 @@ public class Paciente {
                
        }else{
            setEstado("Critico");
-           throw new Exception("El paciente no tiene esta enfermedad o ya tiene el medicamento asignado");
+           throw new EnfermedadNegativa();
        }
         if (enfermedades.isEmpty()) {
            setEstado("Saludable");  
