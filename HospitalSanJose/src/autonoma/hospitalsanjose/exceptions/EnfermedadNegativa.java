@@ -1,12 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package autonoma.hospitalsanjose.exceptions;
 
 /**
  *
- * @author Katherin
+ * @author Andres Rodriguez
+>>>>>>> 569d08bbaf097a6ac2d8bbfaf944a36c2c6e40ad
  */
 public class EnfermedadNegativa extends RuntimeException {
     

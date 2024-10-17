@@ -3,10 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Katherin/Desktop/Tercer%20Semestre/POO/GIT/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/models/Hospital.java</file>
             <file>file:/C:/Users/Katherin/Desktop/Tercer%20Semestre/POO/GIT/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/models/Paciente.java</file>
             <file>file:/C:/Users/Katherin/Desktop/Tercer%20Semestre/POO/GIT/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/models/Cita.java</file>
             <file>file:/C:/Users/Katherin/Desktop/Tercer%20Semestre/POO/GIT/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
+=======
+            <file>file:/C:/Users/Andres%20Rodriguez/Desktop/Hotel/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/models/Paciente.java</file>
+            <file>file:/C:/Users/Andres%20Rodriguez/Desktop/Hotel/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/views/AgregarEmpleado.java</file>
+            <file>file:/C:/Users/Andres%20Rodriguez/Desktop/Hotel/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/models/Nomina.java</file>
+            <file>file:/C:/Users/Andres%20Rodriguez/Desktop/Hotel/Hospital-San-Jose/HospitalSanJose/src/autonoma/hospitalsanjose/exceptions/EnfermedadNegativa.java</file>
+>>>>>>> 569d08bbaf097a6ac2d8bbfaf944a36c2c6e40ad
         </group>
     </open-files>
 </project-private>

@@ -211,6 +211,7 @@ public class Paciente {
     }
 
     /**
+<<<<<<< HEAD
      * el método buscarEnfermedad busca la enfermedad por el nombre
      *
      * @param recibe como parametros un nombre tipo String
@@ -242,6 +243,22 @@ public class Paciente {
             }
         } else {
             throw new EnfermedadNegativa();
+=======
+    * el método eliminarEnfermedad elimina la enfermedad de la lista
+    * @param  recibe como parametros una enfermedad tipo Enfermedad
+    * @return no retorna
+    * @exception maneja una exception
+    */
+    public void eliminarEnfermedad (String nombre) throws EnfermedadNegativa {
+        Enfermedad enfermedad = this.buscarEnfermedad(nombre); 
+        if (enfermedad != null) {
+                enfermedades.remove(enfermedad);
+                if (enfermedades.isEmpty()){
+                    this.estado = "Saludable";
+                }
+        }else{
+            throw new EnfermedadNegativa(); /// en donde estan creadas las excepciones ? /////Corregido!!
+>>>>>>> 569d08bbaf097a6ac2d8bbfaf944a36c2c6e40ad
         }
     }
 
@@ -307,6 +324,7 @@ public class Paciente {
     }
 
     /**
+<<<<<<< HEAD
      * el método eliminarMedicamento elimina un medicamento de la lista.
      *
      * @param recibe como parametros un nombre tipo String
@@ -320,17 +338,40 @@ public class Paciente {
 
         } else {
             throw new EnfermedadNegativa();
+=======
+    * el método eliminarMedicamento elimina un medicamento de la lista.
+    * @param  recibe como parametros un nombre tipo String
+    * @exception tiene una excepcion
+    * @return retorna null.
+    */
+    public MedicamentoPaciente eliminarMedicamento (String nombre) throws EnfermedadNegativa{
+        MedicamentoPaciente medicamento = this.buscarMedicamento(nombre);
+        if (medicamento != null) {
+                 medicamentoPacientes.remove(medicamento);
+                
+        }else{
+            throw new EnfermedadNegativa(); //////////// donde esta ña excepcion /////Corregido!!!
+>>>>>>> 569d08bbaf097a6ac2d8bbfaf944a36c2c6e40ad
         }
         return medicamento;
     }
 
     /**
+<<<<<<< HEAD
      * el método mostrarMedicamento muestra los medicamentos existentes en la
      * lista.
      * @param no recibe parametros
      * @return retorna un String.
      */
     public String mostrarMedicamentos() { 
+=======
+    * el método mostrarMedicamento muestra los medicamentos existentes en la lista.
+    * @param  no recibe parametros
+    * @return retorna un String.
+    */
+    
+    public String mostrarMedicamentos(){  /////// no entiendo este metodo //// corregido
+>>>>>>> 569d08bbaf097a6ac2d8bbfaf944a36c2c6e40ad
         String lista = "";
         for (int i = 0; i > this.medicamentoPacientes.size(); i++) {
             MedicamentoPaciente medicamento = this.medicamentoPacientes.get(i);
@@ -350,6 +391,7 @@ public class Paciente {
 
     //Curar Enfermedad//
     public void curarEnfermedad(Enfermedad enfermedad, MedicamentoPaciente medicamento) throws EnfermedadNegativa {
+<<<<<<< HEAD
         Enfermedad enfermedad1 = this.buscarEnfermedad(enfermedad);
         if (enfermedad1 != null || buscarMedicamento(medicamento) == null) {
             enfermedades.remove(enfermedad);
@@ -359,6 +401,18 @@ public class Paciente {
             setEstado("Critico");
              throw new EnfermedadNegativa();
         }
+=======
+       Enfermedad  enfermedad1 = this.buscarEnfermedad(enfermedad);
+       if(enfermedad1 != null || buscarMedicamento(medicamento) == null ){
+               enfermedades.remove(enfermedad);
+               medicamentoPacientes.add(medicamento);
+               
+               
+       }else{
+           setEstado("Critico");
+           throw new EnfermedadNegativa();
+       }
+>>>>>>> 569d08bbaf097a6ac2d8bbfaf944a36c2c6e40ad
         if (enfermedades.isEmpty()) {
             setEstado("Saludable");
         }
