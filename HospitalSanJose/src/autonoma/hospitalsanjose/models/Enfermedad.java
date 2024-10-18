@@ -10,6 +10,11 @@ package autonoma.hospitalsanjose.models;
 public class Enfermedad {
     
     /**
+     * el atributo nombrePaciente de tipo String se refiere al nombre del paciente 
+     */
+    private String nombrePaciente;
+    
+    /**
     * el atributo nombre de tipo String  se refiere al nombre de la enfermedad.
     */
     private String nombre;
@@ -21,8 +26,9 @@ public class Enfermedad {
     
     /////////////////////////////////////// CONSTRUCTOR //////////////////////////////////////////////
 
-    public Enfermedad(String nombre, String descripción) {
+    public Enfermedad(String nombre,String nombrePaciente, String descripción) {
         this.nombre = nombre;
+        this.nombrePaciente = nombrePaciente;
         this.descripción = descripción;
     }
     
@@ -36,6 +42,16 @@ public class Enfermedad {
         this.nombre = nombre;
     }
 
+    public String getNombrePaciente() {
+        return nombrePaciente;
+    }
+
+    public void setNombrePaciente(String nombrePaciente) {
+        this.nombrePaciente = nombrePaciente;
+    }
+    
+    
+
     public String getDescripción() {
         return descripción;
     }
@@ -47,6 +63,7 @@ public class Enfermedad {
     ///////////////////////////////////// METODOS /////////////////////////////////////////////////
     public String toString(){
         return "Enfermedad: " + "\n" +
+               "Nombre Paciente: " + nombrePaciente + "/n" +
                "Nombre: " + nombre + "\n" +
                "Descripción: " + descripción + "\n";
     }
