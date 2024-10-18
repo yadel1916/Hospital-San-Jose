@@ -21,18 +21,23 @@ public abstract class Medicamento {
     private String descripción;
     protected double costo; 
     protected double precioVenta; 
+    /**
+    * el atributo cantidad de tipo int  se refiere a la cantidad de los medicamentos que hay en el  inventario. 
+    */
+    protected int cantidad;
     
     
     
     //Constructor//
 
-    public Medicamento(String nombre, String descripción, double costo) {
+    public Medicamento(String nombre, String descripción, double costo, int cantidad) {
         Medicamento.autoincremental ++;
         this.nombre = nombre;
         this.descripción = descripción;
         this.costo=costo; 
-        this.precioVenta= calcularVenta();
+        this.precioVenta= calcularVenta()*cantidad;
         this.id = Medicamento.autoincremental;
+        this.cantidad = cantidad; 
     }
     
     
@@ -79,6 +84,15 @@ public abstract class Medicamento {
     public void setId(int id) {
         this.id = id;
     }
+
+    public int getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+    
     
     
     
@@ -89,14 +103,6 @@ public abstract class Medicamento {
     public abstract double calcularVenta();
     
 
-    
-
-    
-    
-   
-    
-    
-    
     
     //Metodos//
     @Override

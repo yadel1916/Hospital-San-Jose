@@ -101,20 +101,20 @@ public class MostrarFarmacia extends javax.swing.JDialog {
         TableFarmacia.setForeground(new java.awt.Color(250, 240, 230));
         TableFarmacia.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Nombre", "Descripción", "Costo", "Precio Venta"
+                "Nombre", "Descripción", "Costo", "Precio Venta", "Cantidad"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class
+                java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -287,6 +287,11 @@ public class MostrarFarmacia extends javax.swing.JDialog {
         jLabel8.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("Vender Medicamento");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout btnVenderMLayout = new javax.swing.GroupLayout(btnVenderM);
         btnVenderM.setLayout(btnVenderMLayout);
@@ -425,11 +430,23 @@ public class MostrarFarmacia extends javax.swing.JDialog {
     }//GEN-LAST:event_btnAgregarMedicamento1MouseClicked
 
     private void btnVenderMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVenderMMouseClicked
-        // TODO add your handling code here:
+        int fila = this.TableFarmacia.getSelectedRow();
+        if (fila >= 0){
+            Medicamento m = this.listaMedicamentos.get(fila);
+            VenderMedicamento ventanaVenderM = new VenderMedicamento(this.ventanaPrincipal,true,hospital,this,m);
+            ventanaVenderM.setVisible(true);
+        }
+        else {
+            JOptionPane.showMessageDialog(this, "Porfavor seleccione el medicamento que desea vender");
+        }
     }//GEN-LAST:event_btnVenderMMouseClicked
 
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        
+    }//GEN-LAST:event_jLabel8MouseClicked
+
     public void llenarTabla (){
-         DefaultTableModel modelDefault = new DefaultTableModel (new String[]{"Nombre","Descripción", "costo","Precio Venta"},this.listaMedicamentos.size());
+         DefaultTableModel modelDefault = new DefaultTableModel (new String[]{"Nombre","Descripción", "costo","Precio Venta","Cantidad"},this.listaMedicamentos.size());
         this.TableFarmacia.setModel(modelDefault); 
         TableModel dataModel = this.TableFarmacia.getModel();
         for (int i = 0; i < this.listaMedicamentos.size(); i++) {
@@ -439,6 +456,7 @@ public class MostrarFarmacia extends javax.swing.JDialog {
             dataModel.setValueAt(m.getDescripción(),i,1);
             dataModel.setValueAt(m.getCosto(),i,2);
             dataModel.setValueAt(m.getPrecioVenta(),i,3);
+            dataModel.setValueAt(m.getCantidad(),i,4);
             
         }
     }
@@ -447,7 +465,6 @@ public class MostrarFarmacia extends javax.swing.JDialog {
     private javax.swing.JTable TableFarmacia;
     private javax.swing.JPanel btnActualizarM;
     private javax.swing.JPanel btnAgregarMedicamento1;
-    private javax.swing.JPanel btnAgregarMedicamento2;
     private javax.swing.JPanel btnBuscarM;
     private javax.swing.JPanel btnEliminarM;
     private javax.swing.JPanel btnMostrarVenta;
@@ -458,7 +475,6 @@ public class MostrarFarmacia extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

@@ -17,10 +17,10 @@ public class MedicamentoMarca extends Medicamento {
     
     //Constructor//
 
-    public MedicamentoMarca(String fabricante, double costo, String nombre, String descripción) {
-        super(nombre, descripción,costo);
+    public MedicamentoMarca(String fabricante, double costo, String nombre, String descripción,int cantidad) {
+        super(nombre, descripción,costo,cantidad);
         this.fabricante = fabricante;
-        this.precioVenta=calcularVenta();
+        this.precioVenta=calcularVenta()*cantidad;
     }
     
     //Metodos get y set//
@@ -38,7 +38,7 @@ public class MedicamentoMarca extends Medicamento {
     //Metodo CalcularVenta//
     @Override
     public double calcularVenta(){
-        return ((costo * 0.25)+ costo);
+        return ((costo * 0.25)+ costo)* this.cantidad;
     }
     
     //Metodos//

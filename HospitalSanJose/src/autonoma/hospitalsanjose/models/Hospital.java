@@ -397,10 +397,10 @@ public class Hospital {
     * @param  recibe como parametros un cita tipo Cita
     * @return no retorna.
     */
-    public void registrarCita(Cita cita) {
-        listaCitas.add(cita);
-        
+    public boolean registrarCita(Cita cita) {
         this.presupuesto += cita.getValorConsulta();
+        return listaCitas.add(cita);
+        
     }
     
     /**
@@ -426,7 +426,7 @@ public class Hospital {
     public int buscarIndiceCita(Cita cita){
         for(int i = 0;i < this.listaCitas.size(); i++){
             Cita c = this.listaCitas.get(i);
-            if (c.equals(listaCitas)){
+            if (c.equals(cita)){
                return i;
             }
         }
@@ -441,7 +441,7 @@ public class Hospital {
     public Cita buscarCitaFechaConsulta( String fechaConsulta){
         for (int i = 0; i < this.listaCitas.size(); i++){
             Cita c= this.listaCitas.get(i);
-            if (c.getFechaConsulta()== fechaConsulta){
+            if (c.getFechaConsulta().equals(fechaConsulta) ){
                 return c;
             }
         }

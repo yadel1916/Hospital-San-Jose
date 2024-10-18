@@ -15,9 +15,9 @@ public class MedicamentoGenerico extends Medicamento {
     
     //Constructor//
 
-    public MedicamentoGenerico(String nombre, String descripcion,double costo) {
-        super(nombre, descripcion, costo);
-        this.precioVenta=calcularVenta();
+    public MedicamentoGenerico(String nombre, String descripcion,double costo, int cantidad) {
+        super(nombre, descripcion, costo,cantidad);
+        this.precioVenta=calcularVenta()*cantidad;
         
     }
     
@@ -28,7 +28,7 @@ public class MedicamentoGenerico extends Medicamento {
     //Metodo abstracto//
     @Override 
     public double calcularVenta(){
-        return (costo * 0.10)+ costo;
+        return ((costo * 0.10)+ costo);
 //        return (( c * 0.10)+ costo);
     }
     

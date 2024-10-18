@@ -28,6 +28,7 @@ public class Inventario {
     */
     private String anioActualizacion;
     
+    
     /**
     * el atributo ArrayListo de tipo Medicamento  se refiere a la lista de los medicamentos que tiene el        inventario. 
     */
@@ -37,6 +38,10 @@ public class Inventario {
     * el atributo ArrayListo de tipo Venta  se refiere a la lista de ventas de los medicamentos. 
     */
     private ArrayList<Venta> listaVentas;
+    
+    /**
+    * el atributo ArrayListo de tipo Venta  se refiere a la lista de ventas de los medicamentos. 
+    */
     
     
     /////////////////////////////////////////// CONSTRUCTOR ////////////////////////////////////////
@@ -109,13 +114,13 @@ public class Inventario {
     * @param  recibe como parametros un medicamento tipo Medicamento, una cantidad tipo int y un id tipo int.
     * @return no retorna. 
     */
-    public boolean agregarVenta(Medicamento medicamento, int cantidad, int id){
+    public boolean agregarVenta(Medicamento medicamento, int id, int cantidad){
         Venta venta=new Venta(id);
-        venta.vender(medicamento, cantidad);
+        
         if (this.listaVentas.add(venta)){
-            for (int i = 0; i < cantidad; i++) {
-            this.listaMedicamentos.remove(medicamento);
-            }  
+            if (venta.vender(medicamento,cantidad)== 0){
+                this.listaMedicamentos.remove(medicamento);
+            }
             return true;  
         }
         return false; 
@@ -260,7 +265,7 @@ public class Inventario {
         }
     }
     /**
-    * el método buscarIndiceEmpleadoId busca el indice del empleado por el id
+    * el método buscarIndiceMecamentoId busca el indice del empleado por el id
     * @param  recibe como parametro id de tipo int.
     * @return retorna un Empleado em.
     */
@@ -274,7 +279,7 @@ public class Inventario {
         return -1;
     }
     /**
-    * el método actualizarEmpleado actualiza los cambios realizados  del empleado
+    * el método actualizarMecamento actualiza los cambios realizados  del Mecamento
     * @param  recibe como parametro id de tipo int y un empleado de tipo Empleado.
     * @return retorna un Empleado em.
     */
