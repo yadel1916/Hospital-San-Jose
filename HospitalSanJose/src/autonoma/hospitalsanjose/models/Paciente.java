@@ -63,14 +63,10 @@ public class Paciente {
      */
     private ArrayList<MedicamentoPaciente> medicamentoPacientes;
 
-    /**
-     * el atributo listaPacientes de tipo ArrayList tendrá la lista de las
-     * listaMedicamentos del paciente.
-     */
-    private ArrayList<Paciente> pacientes;
+    
 
     ///////////////////////////////////////////// CONSTRUCTOR //////////////////////////////////////////////
-    public Paciente(int id, String nombre, String numDocumento, int edad, String correoElectronico, String telefono, String estado) {
+    public Paciente( String nombre, String numDocumento, int edad, String correoElectronico, String telefono, String estado) {
         Paciente.autoincremental++;
         this.id = Paciente.autoincremental;
         this.nombre = nombre;
@@ -81,7 +77,7 @@ public class Paciente {
         this.estado = "Saludable";
         this.enfermedades = new ArrayList<>();
         this.medicamentoPacientes = new ArrayList<>();
-        this.pacientes = new ArrayList<>();
+        
     }
 
     //////////////////////////////////////////// METODOS DE ACCESO ///////////////////////////////////////
@@ -157,13 +153,7 @@ public class Paciente {
         this.medicamentoPacientes = medicamentoPacientes;
     }
 
-    public ArrayList<Paciente> getPacientes() {
-        return pacientes;
-    }
-
-    public void setPacientes(ArrayList<Paciente> pacientes) {
-        this.pacientes = pacientes;
-    }
+    
 
     /**
      * el método toString devuelve una cadena con todos los atributos del
@@ -342,14 +332,14 @@ public class Paciente {
         return lista;
     }
 
-    public String archivoPacientes() {
-        String archivo = "";
-        for (int i = 0; i > this.pacientes.size(); i++) {
-            Paciente pac = this.pacientes.get(i);
-            archivo += pac.toString() + "\n";
-        }
-        return archivo;
-    }
+//    public String archivoPacientes() {
+//        String archivo = "";
+//        for (int i = 0; i > this.pacientes.size(); i++) {
+//            Paciente pac = this.pacientes.get(i);
+//            archivo += pac.toString() + "\n";
+//        }
+//        return archivo;
+//    }
 
     //Curar Enfermedad//
     public void curarEnfermedad(Enfermedad enfermedad, MedicamentoPaciente medicamento) throws EnfermedadNegativa {

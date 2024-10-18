@@ -46,7 +46,7 @@ public class Nomina {
         Nomina.autoincremental++;
         this.fechaNomina = fechaNomina;
         this.id = Nomina.autoincremental;
-        this.totalSalarios = calcularTotalSalarios();
+        this.totalSalarios = 0;
         this.listaEmpleados = new ArrayList<>();
     }
 
@@ -78,6 +78,11 @@ public class Nomina {
     public double getTotalSalarios() {
         return totalSalarios;
     }
+
+    public void setTotalSalarios(double totalSalarios) {
+        this.totalSalarios = totalSalarios;
+    }
+    
 
     public ArrayList<Empleado> getlistaEmpleados() {
         return listaEmpleados;
@@ -136,7 +141,8 @@ public class Nomina {
         for (int i = 0; i < this.listaEmpleados.size(); i++) {
             totalSalarios += this.listaEmpleados.get(i).calcularSalario();
         }
-        return totalSalarios;
+        setTotalSalarios(totalSalarios);
+        return totalSalarios; 
     }
     
     /**
@@ -171,7 +177,7 @@ public class Nomina {
     public Empleado buscarEmpleadoNumDocumento(String numeroDocumento){
        for(int i = 0;i < this.listaEmpleados.size(); i++){
            Empleado em = this.listaEmpleados.get(i);
-           if (em.equals(numeroDocumento)){
+           if (em.getNumeroDocumento().equals(numeroDocumento)){
               return em;
            }
        }
