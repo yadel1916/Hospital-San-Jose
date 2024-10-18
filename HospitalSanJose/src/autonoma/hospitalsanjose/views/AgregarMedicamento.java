@@ -57,6 +57,8 @@ public class AgregarMedicamento extends javax.swing.JDialog {
         btnAgregarMMarca = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         txtFabricante = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtCantidadM = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -142,6 +144,12 @@ public class AgregarMedicamento extends javax.swing.JDialog {
 
         txtFabricante.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel9.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(105, 105, 105));
+        jLabel9.setText("Cantidad");
+
+        txtCantidadM.setBackground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -155,12 +163,12 @@ public class AgregarMedicamento extends javax.swing.JDialog {
                                 .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(262, 262, 262))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(btnAgregarMGenerico, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)
-                                .addComponent(btnAgregarMMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(btnAgregarMGenerico, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(38, 38, 38)
+                                        .addComponent(btnAgregarMMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -176,12 +184,15 @@ public class AgregarMedicamento extends javax.swing.JDialog {
                                 .addGap(18, 18, 18)
                                 .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtDescripcionM, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtCostoM, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtNombreM, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(txtNombreM, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtCantidadM, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
@@ -206,11 +217,15 @@ public class AgregarMedicamento extends javax.swing.JDialog {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
                             .addComponent(txtCostoM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(txtCantidadM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txtFabricante, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnAgregarMGenerico, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnAgregarMMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -241,8 +256,9 @@ public class AgregarMedicamento extends javax.swing.JDialog {
             String nombre = this.txtNombreM.getText();
             String descripcion = this.txtDescripcionM.getText();
             double costo = Double.parseDouble(this.txtCostoM.getText());
+            int cantidad = Integer.parseInt(this.txtCantidadM.getText()); 
  
-            Medicamento m = new MedicamentoGenerico(nombre,descripcion,costo);
+            Medicamento m = new MedicamentoGenerico(nombre,descripcion,costo,cantidad);
             if(this.hospital.agregarMedicamento(m)){
                 JOptionPane.showMessageDialog(this," El medicamento "+nombre+" fue agregado exitosamente");
                 this.mostrarFarmacia.llenarTabla();
@@ -258,6 +274,7 @@ public class AgregarMedicamento extends javax.swing.JDialog {
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(this,"Porfavor ingrese un número en el campo de texto");
             this.txtCostoM.setText("");
+            this.txtCantidadM.setText("");
         }
 
     }//GEN-LAST:event_btnAgregarMGenericoActionPerformed
@@ -272,8 +289,9 @@ public class AgregarMedicamento extends javax.swing.JDialog {
             String descripcion = this.txtDescripcionM.getText();
             double costo = Double.parseDouble(this.txtCostoM.getText());
             String fabricante = this.txtFabricante.getText();
+            int cantidad = Integer.parseInt(this.txtCantidadM.getText()); 
  
-            Medicamento m = new MedicamentoMarca(fabricante,costo,nombre,descripcion);
+            Medicamento m = new MedicamentoMarca(fabricante,costo,nombre,descripcion,cantidad);
             if(this.hospital.agregarMedicamento(m)){
                 JOptionPane.showMessageDialog(this," El medicamento "+nombre+" fue agregado exitosamente");
                 this.mostrarFarmacia.llenarTabla();
@@ -289,6 +307,7 @@ public class AgregarMedicamento extends javax.swing.JDialog {
         catch(NumberFormatException e){
             JOptionPane.showMessageDialog(this,"Porfavor ingrese un número en el campo de texto");
             this.txtCostoM.setText("");
+            this.txtCantidadM.setText("");
         }
     }//GEN-LAST:event_btnAgregarMMarcaActionPerformed
 
@@ -307,8 +326,10 @@ public class AgregarMedicamento extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField txtCantidadM;
     private javax.swing.JTextField txtCostoM;
     private javax.swing.JTextField txtDescripcionM;
     private javax.swing.JTextField txtFabricante;

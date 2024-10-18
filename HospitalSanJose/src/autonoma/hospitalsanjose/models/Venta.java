@@ -70,19 +70,28 @@ public class Venta {
                "Valor Total Venta: " + "\n";
     }
     
-    public void vender(Medicamento medicamento, int cantidad){
-        for (int i = 0; i < cantidad; i++) {
-            this.listaMedicamentos.add(medicamento);
+    public int vender(Medicamento medicamento,int cantidad){
+        this.listaMedicamentos.add(medicamento);
+        if (medicamento.getCantidad()-cantidad >= 0) {
+            medicamento.setCantidad(medicamento.getCantidad()-cantidad);
+            return medicamento.getCantidad(); 
         }
-        
+        return -1; 
     }
 
     public double valorTotalVenta(){
         double valorTotal = 0;
-        for (int i = 0; i < this.listaMedicamentos.size(); i++) {
-            valorTotal += this.listaMedicamentos.get(i).getPrecioVenta();
+        if (this.listaMedicamentos != null) {
+            for (int i = 0; i < this.listaMedicamentos.size(); i++) {
+                valorTotal += this.listaMedicamentos.get(i).getPrecioVenta();
+            }
+        }
+        else{
+            return 0;
         }
         return valorTotal; 
+        
+        
     }
     
 }
