@@ -16,8 +16,8 @@ public class EmpleadoOperativo extends Empleado {
    
     ///////////////////////////////////////// CONSTRUCTOR //////////////////////////////////////////
 
-    public EmpleadoOperativo(String area, String nombre, String numeroDocumento, String edad,double salarioBase, int id) {
-        super(nombre, numeroDocumento, edad, salarioBase, id);
+    public EmpleadoOperativo(String area, String nombre, String numeroDocumento, int edad,double salarioBase) {
+        super(nombre, numeroDocumento, edad, salarioBase);
         this.area = area;
     }
     
@@ -31,37 +31,7 @@ public class EmpleadoOperativo extends Empleado {
         this.area = area;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getNumeroDocumento() {
-        return numeroDocumento;
-    }
-
-    public void setNumeroDocumento(String numeroDocumento) {
-        this.numeroDocumento = numeroDocumento;
-    }
-
-    public String getEdad() {
-        return edad;
-    }
-
-    public void setEdad(String edad) {
-        this.edad = edad;
-    }
-
-    public double getSalarioBase() {
-        return salarioBase;
-    }
-
-    public void setSalarioBase(double salarioBase) {
-        this.salarioBase = salarioBase;
-    }
+    
 
     //////////////////////////////////////////// METODOS /////////////////////////////////////////////////
     

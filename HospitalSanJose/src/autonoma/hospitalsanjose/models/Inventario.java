@@ -41,13 +41,14 @@ public class Inventario {
     
     /////////////////////////////////////////// CONSTRUCTOR ////////////////////////////////////////
 
-    public Inventario(int codigo, String anioActualizacion, ArrayList<Medicamento> listaMedicamentos) {
+    public Inventario(int codigo, String anioActualizacion) {
         
         //Inventario.autoincremental++; 
         this.codigo = codigo;
         this.anioActualizacion = anioActualizacion;
-        this.listaMedicamentos = listaMedicamentos;
+        this.listaMedicamentos = new ArrayList<>();
         this.listaVentas = new ArrayList<>(); 
+        
     }
     
     /////////////////////////////////////// METODOS DE ACCESO ///////////////////////////////////////
@@ -258,7 +259,33 @@ public class Inventario {
             return null;
         }
     }
-    
+    /**
+    * el método buscarIndiceEmpleadoId busca el indice del empleado por el id
+    * @param  recibe como parametro id de tipo int.
+    * @return retorna un Empleado em.
+    */
+    private int buscarIndiceMedicamentoId (int id){
+        for (int i = 0; i < this.listaMedicamentos.size(); i++){
+            Medicamento m = this.listaMedicamentos.get(i);
+            if (m.getId() == id){
+                return i;
+            }
+        }
+        return -1;
+    }
+    /**
+    * el método actualizarEmpleado actualiza los cambios realizados  del empleado
+    * @param  recibe como parametro id de tipo int y un empleado de tipo Empleado.
+    * @return retorna un Empleado em.
+    */
+    public Medicamento actualizarMedicamento(int id, Medicamento medicamento){
+        int index = this.buscarIndiceMedicamentoId(id);
+        if (index >= 0){
+            return this.listaMedicamentos.set(index,medicamento);
+        }else {
+            return null;
+        }
+    }
     /**
     * el método validarPresupuesto valida el presupuesto del hospital.
     * @param  recibe como parametros un hospital tipo Hospital y un medicamento tipo Medicamento.

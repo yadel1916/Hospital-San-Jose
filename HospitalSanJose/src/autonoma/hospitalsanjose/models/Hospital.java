@@ -105,7 +105,7 @@ public class Hospital {
    
     ////////////////////////////////////////////CONSTRUCTOR////////////////////////////////////////////////
 
-    public Hospital(String nombre, String direccion, String telefono, double presupuesto, double metaVentaAnual, String fechaFundacion, String estado, Localizacion ubicacion, Gerente gerente, Paciente pacientes, Nomina nomina, Farmacia farmacia) {
+    public Hospital(String nombre, String direccion, String telefono, double presupuesto, double metaVentaAnual, String fechaFundacion, String estado, Localizacion ubicacion, Gerente gerente, Nomina nomina, Farmacia farmacia) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
@@ -324,7 +324,7 @@ public class Hospital {
     public Paciente buscarPacienteNumDocumento(String numeroDocumento){
        for(int i = 0;i < this.listaPacientes.size(); i++){
            Paciente p = this.listaPacientes.get(i);
-           if (p.equals(numeroDocumento)){
+           if (p.getNumDocumento().equals(numeroDocumento)){
               return p;
            }
        }
@@ -567,7 +567,14 @@ public class Hospital {
     public Medicamento buscarMedicamentoNombre(String nombre){
         return this.farmacia.getInventario().buscarMedicamentoNombre(nombre);
     }
-    
+    /**
+    * el método actualizarEmpleado actualiza el empleado.
+    * @param  recibe como parametro id de tipo int y un empleado de tipo Empleado.
+    * @return retorna un Empleado.
+    */
+    public Medicamento actualizarMedicamento(int id, Medicamento medicamento){
+        return this.farmacia.getInventario().actualizarMedicamento(id, medicamento);
+    }
     /**
     * el método eliminarMedicamento elimina el medicamento
     * @param  recibe como parametros un nombre tipo String.

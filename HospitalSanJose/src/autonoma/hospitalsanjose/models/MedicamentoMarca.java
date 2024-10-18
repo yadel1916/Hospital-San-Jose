@@ -10,6 +10,7 @@ package autonoma.hospitalsanjose.models;
 public class MedicamentoMarca extends Medicamento {
     
     //Atributos//
+    private double precioVenta;
     private String fabricante;
     
    
@@ -19,7 +20,7 @@ public class MedicamentoMarca extends Medicamento {
     public MedicamentoMarca(String fabricante, double costo, String nombre, String descripción) {
         super(nombre, descripción,costo);
         this.fabricante = fabricante;
-        
+        this.precioVenta=calcularVenta();
     }
     
     //Metodos get y set//

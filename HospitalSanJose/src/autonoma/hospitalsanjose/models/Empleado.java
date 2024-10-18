@@ -29,7 +29,7 @@ public abstract class Empleado {
     /**
     * el atributo edad de tipo int  se refiere a la edad del empleado.
     */
-    protected String edad; 
+    protected int edad; 
     
     /**
     * el atributo salarioBase de tipo double  se refiere al salario que tiene el empleado.
@@ -43,7 +43,7 @@ public abstract class Empleado {
     
     ///////////////////////////////////////////// CONSTRUCTOR /////////////////////////////////////////////
 
-    public Empleado(String nombre, String numeroDocumento, String edad,double salarioBase, int id) {
+    public Empleado(String nombre, String numeroDocumento, int edad,double salarioBase) {
         Empleado.autoincremental ++;
         this.nombre = nombre;
         this.numeroDocumento = numeroDocumento;
@@ -70,11 +70,11 @@ public abstract class Empleado {
         this.numeroDocumento = numeroDocumento;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public void setEdad(String edad) {
+    public void setEdad(int edad) {
         this.edad = edad;
     }
 

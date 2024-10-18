@@ -11,7 +11,11 @@ import java.util.ArrayList;
  */
 public abstract class Medicamento {
     
-    //Atributos//
+   /**
+    * el atributo autoincremental de tipo int  autoincrementa lo asignado.
+    */
+    private static int autoincremental = 0;
+    private int id; 
     
     private String nombre;
     private String descripción;
@@ -23,10 +27,12 @@ public abstract class Medicamento {
     //Constructor//
 
     public Medicamento(String nombre, String descripción, double costo) {
+        Medicamento.autoincremental ++;
         this.nombre = nombre;
         this.descripción = descripción;
         this.costo=costo; 
-        this.precioVenta= calcularVenta(); 
+        this.precioVenta= calcularVenta();
+        this.id = Medicamento.autoincremental;
     }
     
     
@@ -65,6 +71,15 @@ public abstract class Medicamento {
     public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     
     
     
