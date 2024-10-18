@@ -91,13 +91,9 @@ public class AgregarMedicamento extends javax.swing.JDialog {
         jLabel3.setForeground(new java.awt.Color(105, 105, 105));
         jLabel3.setText("Nombre");
 
-        txtNombreM.setBackground(new java.awt.Color(255, 255, 255));
-
         jLabel4.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(105, 105, 105));
         jLabel4.setText("Descripción");
-
-        txtDescripcionM.setBackground(new java.awt.Color(255, 255, 255));
 
         btnAgregarMGenerico.setBackground(new java.awt.Color(196, 222, 246));
         btnAgregarMGenerico.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
@@ -125,8 +121,6 @@ public class AgregarMedicamento extends javax.swing.JDialog {
         jLabel7.setForeground(new java.awt.Color(105, 105, 105));
         jLabel7.setText("Costo");
 
-        txtCostoM.setBackground(new java.awt.Color(255, 255, 255));
-
         btnAgregarMMarca.setBackground(new java.awt.Color(196, 222, 246));
         btnAgregarMMarca.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         btnAgregarMMarca.setForeground(new java.awt.Color(105, 105, 105));
@@ -142,6 +136,7 @@ public class AgregarMedicamento extends javax.swing.JDialog {
         jLabel8.setForeground(new java.awt.Color(105, 105, 105));
         jLabel8.setText("Fabricante");
 
+<<<<<<< HEAD
         txtFabricante.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel9.setFont(new java.awt.Font("Serif", 1, 14)); // NOI18N
@@ -150,6 +145,8 @@ public class AgregarMedicamento extends javax.swing.JDialog {
 
         txtCantidadM.setBackground(new java.awt.Color(255, 255, 255));
 
+=======
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(

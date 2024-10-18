@@ -97,6 +97,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jScrollPane1" min="-2" pref="860" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+<<<<<<< HEAD
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="btnActualizarP" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnAgregarPacinete" alignment="0" max="32767" attributes="0"/>
@@ -118,13 +119,36 @@
                       <EmptySpace pref="1058" max="32767" attributes="0"/>
                       <Component id="btnVolver1" min="-2" pref="88" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+=======
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnVolver" min="-2" pref="88" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="btnActualizarP" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnAgregarPacinete" alignment="0" max="32767" attributes="0"/>
+                              <Component id="btnEliminarP" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="txtBuscarNumeroDocumentoP" alignment="0" min="-2" pref="118" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="btnBuscarP" alignment="1" min="-2" max="-2" attributes="0"/>
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
                   </Group>
+                  <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+                  <Component id="btnAgregarEnfermedad" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
+<<<<<<< HEAD
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
@@ -132,12 +156,19 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+=======
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jScrollPane1" min="-2" pref="355" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
                           <Component id="btnAgregarPacinete" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnActualizarP" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnEliminarP" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
+<<<<<<< HEAD
                           <Component id="btnAgendarCita" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="btnMostrarCitas" min="-2" max="-2" attributes="0"/>
@@ -156,6 +187,18 @@
                       <Component id="btnVolver1" min="-2" pref="40" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
+=======
+                          <Component id="btnBuscarP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="txtBuscarNumeroDocumentoP" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="btnVolver" min="-2" pref="40" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnAgregarEnfermedad" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
               </Group>
           </Group>
         </DimensionLayout>
@@ -304,14 +347,14 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                      <EmptySpace pref="41" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace pref="10" max="32767" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -431,9 +474,6 @@
         </Container>
         <Component class="javax.swing.JTextField" name="txtBuscarNumeroDocumentoP">
           <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
@@ -461,7 +501,11 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVolver1ActionPerformed"/>
           </Events>
         </Component>
+<<<<<<< HEAD
         <Container class="javax.swing.JPanel" name="btnAgendarCita">
+=======
+        <Container class="javax.swing.JPanel" name="btnAgregarEnfermedad">
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f6" green="de" red="c4" type="rgb"/>
@@ -473,6 +517,7 @@
             </Property>
           </Properties>
           <Events>
+<<<<<<< HEAD
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAgendarCitaMouseClicked"/>
           </Events>
 
@@ -526,6 +571,9 @@
           </Properties>
           <Events>
             <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnMostrarCitasMouseClicked"/>
+=======
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAgregarEnfermedadMouseClicked"/>
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
           </Events>
 
           <Layout>
@@ -541,9 +589,14 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+=======
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
                   </Group>
               </Group>
             </DimensionLayout>
@@ -557,11 +610,16 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
+<<<<<<< HEAD
                 <Property name="text" type="java.lang.String" value="Mostrar Citas"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel7MouseClicked"/>
               </Events>
+=======
+                <Property name="text" type="java.lang.String" value="AgregarEnfermedad"/>
+              </Properties>
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
             </Component>
           </SubComponents>
         </Container>

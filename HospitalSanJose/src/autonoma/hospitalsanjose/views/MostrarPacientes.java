@@ -60,10 +60,15 @@ public class MostrarPacientes extends javax.swing.JDialog {
         btnEliminarP = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         txtBuscarNumeroDocumentoP = new javax.swing.JTextField();
+<<<<<<< HEAD
         btnVolver1 = new javax.swing.JButton();
         btnAgendarCita = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         btnMostrarCitas = new javax.swing.JPanel();
+=======
+        btnVolver = new javax.swing.JButton();
+        btnAgregarEnfermedad = new javax.swing.JPanel();
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -180,12 +185,12 @@ public class MostrarPacientes extends javax.swing.JDialog {
             .addGroup(btnBuscarPLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel4)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
         btnBuscarPLayout.setVerticalGroup(
             btnBuscarPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnBuscarPLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(10, Short.MAX_VALUE)
                 .addComponent(jLabel4))
         );
 
@@ -247,7 +252,6 @@ public class MostrarPacientes extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        txtBuscarNumeroDocumentoP.setBackground(new java.awt.Color(255, 255, 255));
         txtBuscarNumeroDocumentoP.setForeground(new java.awt.Color(51, 51, 51));
 
         btnVolver1.setBackground(new java.awt.Color(196, 222, 246));
@@ -261,6 +265,7 @@ public class MostrarPacientes extends javax.swing.JDialog {
             }
         });
 
+<<<<<<< HEAD
         btnAgendarCita.setBackground(new java.awt.Color(196, 222, 246));
         btnAgendarCita.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         btnAgendarCita.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -300,11 +305,19 @@ public class MostrarPacientes extends javax.swing.JDialog {
         btnMostrarCitas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnMostrarCitasMouseClicked(evt);
+=======
+        btnAgregarEnfermedad.setBackground(new java.awt.Color(196, 222, 246));
+        btnAgregarEnfermedad.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnAgregarEnfermedad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAgregarEnfermedadMouseClicked(evt);
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
             }
         });
 
         jLabel7.setFont(new java.awt.Font("Serif", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(102, 102, 102));
+<<<<<<< HEAD
         jLabel7.setText("Mostrar Citas");
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -317,16 +330,33 @@ public class MostrarPacientes extends javax.swing.JDialog {
         btnMostrarCitasLayout.setHorizontalGroup(
             btnMostrarCitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnMostrarCitasLayout.createSequentialGroup()
+=======
+        jLabel7.setText("AgregarEnfermedad");
+
+        javax.swing.GroupLayout btnAgregarEnfermedadLayout = new javax.swing.GroupLayout(btnAgregarEnfermedad);
+        btnAgregarEnfermedad.setLayout(btnAgregarEnfermedadLayout);
+        btnAgregarEnfermedadLayout.setHorizontalGroup(
+            btnAgregarEnfermedadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnAgregarEnfermedadLayout.createSequentialGroup()
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
                 .addGap(22, 22, 22)
                 .addComponent(jLabel7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+<<<<<<< HEAD
         btnMostrarCitasLayout.setVerticalGroup(
             btnMostrarCitasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(btnMostrarCitasLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+=======
+        btnAgregarEnfermedadLayout.setVerticalGroup(
+            btnAgregarEnfermedadLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(btnAgregarEnfermedadLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7))
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -337,6 +367,7 @@ public class MostrarPacientes extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<<<<<<< HEAD
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(btnActualizarP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAgregarPacinete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -355,22 +386,48 @@ public class MostrarPacientes extends javax.swing.JDialog {
                     .addContainerGap(1058, Short.MAX_VALUE)
                     .addComponent(btnVolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(16, 16, 16)))
+=======
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(36, 36, 36))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(btnActualizarP, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAgregarPacinete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnEliminarP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(txtBuscarNumeroDocumentoP, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnBuscarP, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(44, 44, 44))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(156, 156, 156)
+                .addComponent(btnAgregarEnfermedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
+=======
+                .addGap(15, 15, 15)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
                         .addComponent(btnAgregarPacinete, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnActualizarP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnEliminarP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+<<<<<<< HEAD
                         .addComponent(btnAgendarCita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnMostrarCitas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -384,6 +441,16 @@ public class MostrarPacientes extends javax.swing.JDialog {
                     .addContainerGap(588, Short.MAX_VALUE)
                     .addComponent(btnVolver1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(18, 18, 18)))
+=======
+                        .addComponent(btnBuscarP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtBuscarNumeroDocumentoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(btnVolver, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnAgregarEnfermedad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(30, Short.MAX_VALUE))
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -483,6 +550,11 @@ public class MostrarPacientes extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel7MouseClicked
 
+    private void btnAgregarEnfermedadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarEnfermedadMouseClicked
+        AgregarEnfermedad enfermedadPa = new AgregarEnfermedad (this.ventanaPrincipal,true,hospital,null);
+        enfermedadPa.setVisible(true);
+    }//GEN-LAST:event_btnAgregarEnfermedadMouseClicked
+
     
     public void llenarTabla (){
          DefaultTableModel modelDefault = new DefaultTableModel (new String[]{"Nombre","Número Documento", "Edad","Correo Electrónico","Telefono", "Estado"},this.listaPacientes.size());
@@ -502,7 +574,11 @@ public class MostrarPacientes extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable TablePacientes;
     private javax.swing.JPanel btnActualizarP;
+<<<<<<< HEAD
     private javax.swing.JPanel btnAgendarCita;
+=======
+    private javax.swing.JPanel btnAgregarEnfermedad;
+>>>>>>> fd57596d0c7e78d260d4eaf9de0a006824e364ff
     private javax.swing.JPanel btnAgregarPacinete;
     private javax.swing.JPanel btnBuscarP;
     private javax.swing.JPanel btnEliminarP;

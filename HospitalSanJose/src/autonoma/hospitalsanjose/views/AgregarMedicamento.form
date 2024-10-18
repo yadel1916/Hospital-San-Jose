@@ -213,11 +213,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombreM">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -231,11 +226,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtDescripcionM">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnAgregarMGenerico">
           <Properties>
@@ -293,11 +283,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtCostoM">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnAgregarMMarca">
           <Properties>
@@ -333,11 +318,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtFabricante">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
